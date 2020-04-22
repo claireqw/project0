@@ -1,0 +1,84 @@
+$spacing: 10px;
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 599px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+
+table {
+  margin: $spacing;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 50%;
+}
+th, td {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid black;
+}
+.container {
+  margin: 50px;
+}
+
+%bigcat {
+  font-size: 16px;
+  // font-weight: bold;
+  padding: $spacing;
+  color: white;
+  width: 60%;
+  height: 500px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin: 10px;
+  h1 {
+    font-style: italic;
+    font-size: 24px;
+  }
+}
+
+%bigcat::before {
+  content: "a big cat:";
+}
+
+.tiger {
+  @extend %bigcat;
+  background-image: url("https://images.unsplash.com/photo-1550973595-c9f4d21f38cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80")
+}
+
+.tiger:hover {
+  background-image: url("https://d1u82yn7miridg.cloudfront.net/eyJidWNrZXQiOiJsYWJyb290cy1hc3NldHMiLCJrZXkiOiJfcHVibGljXC9fZmlsZXNcL3N5c3RlbVwvY2tcL3RyZW5kaW5nXC8xOTIweDEyMDAtdGlnZXItZ3Jpbi1iaWctY2F0XzE1OThlZGI1ZjYyODJmOGU0NDU0NjhmMTJlYWRiMDYwLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NzAwLCJmaXQiOiJjb3ZlciJ9fX0=")
+}
+
+.jaguar {
+  @extend %bigcat;
+  background-image: url("https://reidparkzoo.org/wp-content/uploads/2013/04/jaguar2856jz-1024x683.jpg");
+}
+
+.jaguar:hover {
+  background-image: url("https://mk0mexiconewsdam2uje.kinstacdn.com/wp-content/uploads/2019/12/jaguars.jpg");
+}
+
+#box {
+  font-size: 24px;
+  font-family: cursive;
+  text-shadow: 2px 2px #aee8be;
+  margin-bottom: 25px;
+}
+
+.emoji {
+  font-size: 24px;
+}
+
+.emoji::after {
+  font-size: 20px;
+  content: " :3";
+}
